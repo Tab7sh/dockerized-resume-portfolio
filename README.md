@@ -1,63 +1,53 @@
-🚀 Dockerized Resume Portfolio
+🌟 FULL-STACK DYNAMIC PORTFOLIO STACK 🌟
+📌 PROJECT OVERVIEW 📌
+Ye project aik mukammal End-to-End Microservice Architecture ko demonstrate karta hai. Is mein sirf aik static page nahi hai, balkay aik Python-Flask backend ko Redis database ke saath integrate kiya gaya hai taake live visitor analytics ko track aur save kiya ja sakay.
 
-📌 Overview
+🛠 TECH STACK 🛠
+🐍 Backend: Python 3.9 (Flask Framework)
 
-This project demonstrates the fundamentals of containerization by deploying a static personal resume portfolio using Docker and Nginx (Alpine).
+⚡ Persistence Layer: Redis (High-speed In-memory Data Store)
 
-The goal was to package a simple HTML portfolio into a lightweight Docker image that can run consistently across any environment.
+🌐 Web Server: Nginx (Alpine-based for high performance)
 
-🛠 Tech Stack
+🎼 Orchestration: Docker Compose
 
-Docker – Containerization
+🐳 Containerization: Docker
 
-Nginx (Alpine) – Lightweight web server
+🏗 ARCHITECTURE & IMPLEMENTATION 🏗
+1️⃣ Containerized Services
+💻 Frontend/App: Aik custom Docker image banayi gayi hai jo portfolio serve karti hai aur backend logic ko handle karti hai.
 
-HTML5 – Static frontend
+🗄️ Database: Aik Redis container deploy kiya gaya hai jo visitor counts ko permanently save rakhta hai.
 
-📂 Project Structure
-.
-├── Dockerfile
-└── index.html
-🏗 How It Works
+2️⃣ Networking & Orchestration
+🔗 Docker Compose: Iska use karte hue frontend aur backend ko aik private bridge network par jora gaya hai.
 
-The Dockerfile uses the official nginx:alpine base image
+📡 Service Discovery: Is stack mein app Redis se uske service name (redis-db) ke zariye communicate karti hai, na ke kisi static IP se.
 
-Copies index.html into the Nginx web root directory
+3️⃣ Data Persistence
+💾 Volumes: Stack ko is tarah configure kiya gaya hai ke agar containers delete bhi ho jayen, tab bhi analytics data mehfooz rahega.
 
-Exposes port 80 inside the container
+📊 PROJECT PROOF 📊
+✅ Multi-Container Health Check
+Dono Portfolio aur Redis containers synchronized aur active hain.
 
-Runs Nginx in the foreground
+🌍 Live Application Access
+Dynamic resume port 8080 par live hai aur real-time visitor tracking show kar raha hai.
 
-🚀 Run Locally
-1️⃣ Clone Repository
-git clone https://github.com/Tab7sh/dockerized-resume-portfolio.git
-cd dockerized-resume-portfolio
-2️⃣ Build Docker Image
-docker build -t portfolio-app .
-3️⃣ Run Container
-docker run -d -p 8080:80 portfolio-app
+🚀 QUICK START 🚀
+📂 Clone the Repo:
 
-Open in your browser:
+Bash
+git clone https://github.com/Tab7sh/Dynamic-DevOps-Portfolio.git
+🏗 Launch the Stack:
 
-http://localhost:8080
-📊 Key Learning Outcomes
+PowerShell
+docker-compose up -d --build
+✨ Access App: Browser mein http://localhost:8080 kholen.
 
-Understanding Docker image creation
+💡 KEY LEARNING OUTCOMES 💡
+🎯 Multi-service container orchestration mein maharat hasil ki.
 
-Writing a basic Dockerfile
+🔌 Real-time database connectivity ko containerized environment mein implement kiya.
 
-Port mapping (host:container)
-
-Running and managing containers
-
-Deploying static sites with Nginx
-
-🎯 Purpose of This Project
-
-This project was created to strengthen my understanding of:
-
-Docker fundamentals
-
-Container networking
-
-Lightweight production-ready deployments
+⚙️ Port mapping aur internal Docker networking ko manage kiya.
